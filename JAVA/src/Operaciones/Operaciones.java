@@ -11,15 +11,15 @@ package Operaciones;
  */
 public class Operaciones {
     public int Sumar(int x, int y){
-       int suma=x-y;
+       int suma=x+y;
         return suma;
     }
     public int Resta(int x, int y){
-       int resta=x+y;
+       int resta=x-y;
         return resta;
     }
     public int Multiplicacion(int x, int y){
-       int mul=x*y;
+       int mul=x-y;
         return mul;
     }
     public int Division(int x, int y){
