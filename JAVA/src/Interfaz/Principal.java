@@ -33,13 +33,21 @@ public class Principal extends javax.swing.JFrame {
         jTxtY = new javax.swing.JTextField();
         btnSuma = new javax.swing.JButton();
         jLRespuesta = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnSuma.setText("Sumar");
+        btnSuma.setText("+");
         btnSuma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSumaActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("-");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -56,9 +64,12 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jTxtY, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(btnSuma)
-                        .addGap(89, 89, 89)
-                        .addComponent(jLRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnSuma)
+                                .addGap(89, 89, 89)
+                                .addComponent(jLRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -72,7 +83,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSuma)
                     .addComponent(jLRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(141, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addContainerGap(107, Short.MAX_VALUE))
         );
 
         pack();
@@ -86,6 +99,15 @@ public class Principal extends javax.swing.JFrame {
             jLRespuesta.setText(""+respuesta);
 // TODO add your handling code here:
     }//GEN-LAST:event_btnSumaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+         int x= Integer.parseInt(jTxtX.getText());
+      int y= Integer.parseInt(jTxtX.getText());
+            Operaciones op= new Operaciones();
+            int respuesta=op.Resta(x, y);
+            jLRespuesta.setText(" " + respuesta);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,6 +146,7 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSuma;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLRespuesta;
     private javax.swing.JTextField jTxtX;
     private javax.swing.JTextField jTxtY;
