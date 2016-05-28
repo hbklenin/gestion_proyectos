@@ -95,7 +95,7 @@ public class Principal extends javax.swing.JFrame {
       int x= Integer.parseInt(jTxtX.getText());
       int y= Integer.parseInt(jTxtX.getText());
             Operaciones op= new Operaciones();
-            int respuesta=op.Sumar(x, y);
+            int respuesta=op.Sumar(x,y);
             jLRespuesta.setText(""+respuesta);
 // TODO add your handling code here:
     }//GEN-LAST:event_btnSumaActionPerformed
@@ -105,7 +105,7 @@ public class Principal extends javax.swing.JFrame {
          int x= Integer.parseInt(jTxtX.getText());
       int y= Integer.parseInt(jTxtX.getText());
             Operaciones op= new Operaciones();
-            int respuesta=op.Resta(x, y);
+            int respuesta=op.Resta(x,y);
             jLRespuesta.setText(" " + respuesta);
     }//GEN-LAST:event_jButton1ActionPerformed
 
