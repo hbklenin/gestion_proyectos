@@ -7,7 +7,7 @@ package Operaciones;
 
 /**
  *
- * @author Luis
+ * @author Lenin
  */
 public class Operaciones {
     public int Sumar(int x, int y){

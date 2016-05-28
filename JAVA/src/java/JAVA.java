@@ -7,7 +7,7 @@ package java;
 
 /**
  *
- * @author Luis
+ * @author Lenin
  */
 public class JAVA {
 
