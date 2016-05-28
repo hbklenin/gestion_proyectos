@@ -26,4 +26,10 @@ public class Operaciones {
        int div=x/y;
         return div;
     }
+    
+    public double Porcentaje(int x, int y){
+    
+        double porc=(x*(y/100));
+        return porc;
+    }
 }
